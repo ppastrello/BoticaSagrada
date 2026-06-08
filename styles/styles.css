@@ -404,3 +404,69 @@ ul li a:hover {
                 align-items: center;
         }
 }
+
+/* Rituales */
+
+.rituales-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto 60px auto;
+        padding: 0 20px;
+}
+
+.ritual-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        border-top: 4px solid #a38a75;
+        width: calc(33.333% - 20px);
+        min-width: 300px;
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+.rituales-intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+}
+
+.rituales-intro h1 {
+        font-size: 2.5rem;
+        color: #5c4d43;
+        margin-bottom: 15px;
+}
+
+.ritual-pasos {
+        background-color: #fcfaf7;
+        border-left: 3px solid #a38a75;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 0 8px 8px 0;
+}
+
+.ritual-pasos h3 {
+        font-size: 1rem;
+        margin-top: 0;
+        color: #a38a75;
+}
+
+.ritual-pasos p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+        font-style: italic;
+}
+
+
+@media (max-width: 768px) {
+        .ritual-card {
+                width: 100%;
+        }
+}
