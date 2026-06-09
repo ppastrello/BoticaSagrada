@@ -1,0 +1,7 @@
+.vscode/
+notas.txt
+node_modules/
+styles/styles.css.map
+styles-back-up.css
+package.json
+package.lock.json

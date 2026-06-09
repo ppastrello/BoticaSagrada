@@ -1,0 +1,35 @@
+@keyframes balanceoLogo {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    33% {
+        transform: rotate(-3deg) scale(1.05);
+    }
+
+    66% {
+        transform: rotate(3deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1.05);
+    }
+}
+
+@keyframes softPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animacion-pulso {
+    animation: softPulse 3s ease-in-out infinite; // "infinite" hace que no pare de latir
+}

@@ -1,0 +1,98 @@
+@use '../utilities/variable' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/animations' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-principal;
+}
+
+html,
+body {
+    max-width: 100%;
+    background-color: $color-bg-body;
+    padding-bottom: 30px;
+}
+
+.encabezado {
+    width: 100%;
+    background-color: $color-accent;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+
+    &:hover {
+        animation: balanceoLogo 0.6s ease-in-out forwards;
+    }
+
+    &:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+}
+
+.lista {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: inline;
+}
+
+ul {
+    margin: 20px auto 0 auto;
+    padding: 0;
+    list-style: none;
+    @include flex-center;
+    gap: 25px;
+    max-width: 600px;
+
+    li {
+        font-family: $font-principal;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 0.3s ease, filter 0.3s ease;
+
+        a {
+            text-decoration: none;
+            color: $color-secundario;
+            border-radius: 5px;
+            @include transition-standard;
+
+            &:hover {
+                background-color: $color-bg-body;
+                color: $color-primario;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 15px auto 0 auto;
+        padding: 0 10px;
+
+        li {
+            font-size: 13px;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use '../utilities/variable' as *;
+
+.rituales-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    h1 {
+        font-size: 2.5rem;
+        color: #5c4d43;
+        margin-bottom: 15px;
+    }
+}
+
+.rituales-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.ritual-card {
+    background-color: $color-bg-card;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid $color-ritual-border;
+    width: calc(33.333% - 20px);
+    min-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ritual-pasos {
+    background-color: $color-bg-alt;
+    border-left: 3px solid $color-ritual-border;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 0 8px 8px 0;
+
+    h3 {
+        font-size: 1rem;
+        margin-top: 0;
+        color: $color-ritual-border;
+    }
+
+    p {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 768px) {
+    .ritual-card {
+        width: 100%;
+    }
+}
